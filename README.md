@@ -8,6 +8,8 @@ For a more thorough explanation of Trunk and its features, please head over to t
 
 ### Installation
 
+If you have not yet installed NPM,it's time to install Npm: <https://nodejs.org/en>,And npm will also automatically install after you install nodejs
+
 If you don't already have it installed, it's time to install Rust: <https://www.rust-lang.org/tools/install>.
 The rest of this guide assumes a typical Rust installation which contains both `rustup` and Cargo.
 
@@ -27,20 +29,26 @@ cargo install trunk wasm-bindgen-cli
 
 That's it, we're done!
 
+### Generate
+
+```bash
+cargo generate --git https://github.com/mekefly/yew-tailwind-trunk-minimal-template
+cd xxxxxx
+npm install
+```
+
 ### Running
 
 ```bash
-trunk serve
+npm dev
 ```
 
 Rebuilds the app whenever a change is detected and runs a local server to host it.
 
-There's also the `trunk watch` command which does the same thing but without hosting it.
-
 ### Release
 
 ```bash
-trunk build --release
+npm build
 ```
 
 This builds the app in release mode similar to `cargo build --release`.
